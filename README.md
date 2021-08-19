@@ -40,7 +40,38 @@ Lines 2 specifies the cost for getting from node 0 to all other nodes in the net
 Lines 3 through N+1 specifies the costs for getting from nodes 1 though N (where N is the number of nodes read in on Line 1) to all other nodes in the network.
 
 Lines N+2 through 2N+1 specify the coordinates of each node in the network.  Your algorithm doesn’t actually need this information so you can ignore it.  But graphicsStuff.cpp uses the information to create a graphical representation of the road network.
-
+```
+15
+-1  -1  -1  -1  20  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1
+-1  -1  11  -1  -1  40  -1  -1  -1  -1  -1  -1  -1  -1  -1
+-1  11  -1  13  -1  -1  33  -1  -1  -1  -1  -1  -1  -1  -1
+-1  -1  13  -1  -1  -1  -1  17  -1  -1  -1  -1  -1  -1  -1
+20  -1  -1  -1  -1  15  -1  -1  10  -1  -1  -1  -1  -1  -1
+-1  40  -1  -1  15  -1  25  -1  -1  -1  -1  -1  -1  -1  -1
+-1  -1  33  -1  -1  25  -1  30  -1  33  -1  -1  -1  -1  -1
+-1  -1  -1  17  -1  -1  30  -1  -1  -1  16  -1  -1  -1  -1
+-1  -1  -1  -1  10  -1  -1  -1  -1  43  -1  10  -1  -1  -1
+-1  -1  -1  -1  -1  -1  33  -1  43  -1  19  -1  -1  12  -1
+-1  -1  -1  -1  -1  -1  -1  16  -1  19  -1  -1  -1  -1  40
+-1  -1  -1  -1  -1  -1  -1  -1  10  -1  -1  -1  10  -1  -1
+-1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  10  -1  10  -1
+-1  -1  -1  -1  -1  -1  -1  -1  -1  12  -1  -1  10  -1  13
+-1  -1  -1  -1  -1  -1  -1  -1  -1  -1  40  -1  -1  13  -1
+0   0
+10  0
+20  0
+30  0
+0   10
+10  10
+20  10
+30  10
+0   20
+20  20
+30  20
+0   30
+10  30
+20  30
+```
 
 ## The Algorithm
 To complete this lab, you need to implement the abstract class NavigateInterface.h.  To do this, you should create the files Navigate.h and Navigate.cpp.  The class you create in these files must implement three functions: readNetwork, computeShortestPath, and printPath.  Specifications for these functions are given in NavigateInterace.h.
