@@ -2,8 +2,8 @@
  
 ## Purposes:
 This lab is intended to:
-(1)	Give you experience implementing queues and priorities queues in C++.  
-(2)	Help you understand the usefulness of queues and priorities in computer programs (as opposed to just always using lists)
+1.	Give you experience implementing queues and priorities queues in C++.  
+2.	Help you understand the usefulness of queues and priorities in computer programs (as opposed to just always using lists)
  
 ## Overview:
 You’ve been hired as an intern for a new driverless care (start-up) company.  The company wants you to create a navigation system for their cars.  Your first step in creating this navigation system is to create a computer program that takes as input a road network and outputs the shortest (with respect to time-to-travel) path from any desired start location in the road network to any ending location in the road network.   In this lab, you will carry out that task using a simple algorithm that is most easily implemented using priority queues and queues.
@@ -91,6 +91,3 @@ Remember that, in C++, the function top() returns the item on the priority queue
 ### Hint 4
 When I implemented the algorithm described in the previous section of these lab specifications, I found it useful to be able to see what the last item was that I had added to a queue (in order to see if the path of the object I was currently considering had the endNode in it).  To do that, you can use the back() function, which returns the item that was last added to the queue.
 
-
-
-![image](https://user-images.githubusercontent.com/5827093/130145252-731b4e7e-19c3-4ff0-87ff-540eaa9a08cb.png)
