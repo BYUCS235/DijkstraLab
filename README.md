@@ -78,12 +78,14 @@ To complete this lab, you need to implement the abstract class NavigateInterface
 
 We will use a simplified version of Dijkstra’s algorithm to find the shortest path from startNode to endNode.  This algorithm uses a priority queue in which we store custom objects into the priority queue.  Each object has two fields: a cost field and a path field.  Let object.cost be the cost of the object and object.path be the path of the object.  Also, let Cost(i,j) indicate the cost of going from node i to node j.
 
+```
 1. Add an object to an initially empty priority queue, where object.cost=0 and object.path=startNode
 
 2.  While the top object in the priority queue does not contain a path that includes endNode do
 3.  	Pop the top item off the priority queue and store it as the variable current
 4.	Let n be the last node in current.path
 5.	For each neighbor j of n (i.e., Cost(n,j) > 0), add an object obj to the priority queue in which obj.cost = current.cost+Cost(n,j) and obj.path = concat(current.path, j)
+```
 
 ## Implementation Notes
 
@@ -91,7 +93,7 @@ The simplest way of implementing the above algorithm is to use a priority queue.
 
 ### Hint 1
 In this priority queue, you will store custom path objects.  In my code, I defined these path objects as follows:
-
+```
 struct aPath {
     int cost;
     queue<int> path;
@@ -99,7 +101,7 @@ struct aPath {
         return p1.cost > p2.cost;
     }
 };
-
+```
 
 Note that a struct in C++ is essentially a class.  So a variable of type aPath has two fields: cost and path.  The cost variable stores the cost of navigating the partial path specified by path, which is a queue defining the order of nodes to be traversed.  Additionally, the struct overloads the operator function.  This function tells us how to compare 2 paths p1 and p2.  The priority queue will call this function to determine which of two paths has the least cost as it decides which item should be at the top/front of the priority queue.
 
