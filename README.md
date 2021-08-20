@@ -84,7 +84,8 @@ We will use a simplified version of Dijkstra’s algorithm to find the shortest 
 2.  While the top object in the priority queue does not contain a path that includes endNode do
 3.  	Pop the top item off the priority queue and store it as the variable current
 4.	Let n be the last node in current.path
-5.	For each neighbor j of n (i.e., Cost(n,j) > 0), add an object obj to the priority queue in which obj.cost = current.cost+Cost(n,j) and obj.path = concat(current.path, j)
+5.	For each neighbor j of n (i.e., Cost(n,j) > 0), 
+     add an object obj to the priority queue in which obj.cost = current.cost+Cost(n,j) and obj.path = concat(current.path, j)
 ```
 
 ## Implementation Notes
